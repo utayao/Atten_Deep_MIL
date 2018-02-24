@@ -6,7 +6,7 @@ This is an implementation of "Attention-based Deep MIL" (https://128.84.21.199/p
 ### Results from my implementation
 
 <p align="center">
-  <img align="center" src="Overview.png" width="600">
+  <img align="center" src="img80.bmp" width="100">
 </p>
 
 ### Contents
