@@ -1,6 +1,6 @@
 import numpy as np
 import glob
-from sklearn.cross_validation import KFold
+from sklearn.model_selection import KFold
 
 def load_dataset(dataset_path, n_folds, rand_state):
     """
@@ -21,10 +21,10 @@ def load_dataset(dataset_path, n_folds, rand_state):
 
     all_path = pos_path + neg_path
 
-    num_bag = len(all_path)
-    kf = KFold(num_bag, n_folds=n_folds, shuffle=True, random_state=rand_state)
+    #num_bag = len(all_path)
+    kf = KFold(n_splits=n_folds, shuffle=True, random_state=rand_state)
     datasets = []
-    for train_idx, test_idx in kf:
+    for train_idx, test_idx in kf.split(all_path):
         dataset = {}
         dataset['train'] = [all_path[ibag] for ibag in train_idx]
         dataset['test'] = [all_path[ibag] for ibag in test_idx]

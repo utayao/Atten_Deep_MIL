@@ -10,8 +10,8 @@ from keras.models import Model
 from keras.optimizers import SGD,Adam
 from keras.regularizers import l2
 from keras.layers import Input, Dense, Layer, Dropout, Conv2D, MaxPooling2D, Flatten, multiply
-from metrics import bag_accuracy, bag_loss
-from custom_layers import Mil_Attention, Feature_pooling, Last_Sigmoid
+from .metrics import bag_accuracy, bag_loss
+from .custom_layers import Mil_Attention, Last_Sigmoid
 
 def cell_net(input_dim, args, useMulGpu=False):
 
@@ -40,7 +40,7 @@ def cell_net(input_dim, args, useMulGpu=False):
 
     out = Last_Sigmoid(output_dim=1, name='FC1_sigmoid')(x_mul)
     #
-    model = Model(input=[data_input], output=[out])
+    model = Model(inputs=[data_input], outputs=[out])
 
     # model.summary()
 
