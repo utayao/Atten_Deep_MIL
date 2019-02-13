@@ -166,7 +166,7 @@ def train_eval(model, train_set, irun, ifold):
     callbacks = [checkpoint_fixed_name, EarlyStop]
 
     history = model.fit_generator(generator=train_gen, steps_per_epoch=len(model_train_set)//batch_size,
-                                             nb_epoch=args.max_epoch, validation_data=val_gen,
+                                             epochs=args.max_epoch, validation_data=val_gen,
                                             validation_steps=len(model_val_set)//batch_size, callbacks=callbacks)
 
     train_loss = history.history['loss']
@@ -224,8 +224,8 @@ def model_training(input_dim, dataset, irun, ifold):
     t2 = time.time()
     #
 
-    print 'run time:', (t2 - t1) / 60.0, 'min'
-    print 'test_acc={:.3f}'.format(test_acc)
+    print ('run time:', (t2 - t1) / 60.0, 'min')
+    print ('test_acc={:.3f}'.format(test_acc))
 
     return test_acc
 
@@ -235,21 +235,21 @@ if __name__ == "__main__":
 
     args = parse_args()
 
-    print 'Called with args:'
-    print args
+    print ('Called with args:')
+    print (args)
 
     input_dim = (27,27,3)
 
     run = 1
     n_folds = 10
     acc = np.zeros((run, n_folds), dtype=float)
-    data_path = 'dataset/Colon/Patches'
+    data_path = '../data/Patches'
 
     for irun in range(run):
         dataset = load_dataset(dataset_path=data_path, n_folds=n_folds, rand_state=irun)
         for ifold in range(n_folds):
-            print 'run=', irun, '  fold=', ifold
+            print ('run=', irun, '  fold=', ifold)
             acc[irun][ifold] = model_training(input_dim, dataset[ifold], irun, ifold)
-    print 'mi-net mean accuracy = ', np.mean(acc)
-    print 'std = ', np.std(acc)
+    print ('mi-net mean accuracy = ', np.mean(acc))
+    print ('std = ', np.std(acc))
 

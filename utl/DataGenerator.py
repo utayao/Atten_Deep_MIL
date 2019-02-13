@@ -1,8 +1,8 @@
 import numpy as np
 import random
-from itertools import izip as zip, count
 import threading
-from data_aug_op import random_flip_img, random_rotate_img
+from .data_aug_op import random_flip_img, random_rotate_img
+#from keras.preprocessing.image import ImageDataGenerator
 import scipy.misc as sci
 
 class threadsafe_iter(object):
@@ -43,15 +43,31 @@ class DataGenerator(object):
     def __Data_Genaration(self, batch_train):
         bag_batch = []
         bag_label = []
+        
+        #datagen = ImageDataGenerator()
+                                                                       
+        #transforms = {
+        	#	"theta" : 0.25,
+        	#	"tx" : 0.2,
+        	#	"ty" : 0.2,
+        	#	"shear" : 0.2,
+        	#	"zx" : 0.2,
+        	#	"zy" : 0.2,
+        #   "flip_horizontal" : True,
+        #		"zx" : 0.2,
+        	#	"zy" : 0.2,
+        	#}
+        
         for ibatch, batch in enumerate(batch_train):
             aug_batch = []
             img_data = batch[0]
-            for i in xrange(img_data.shape[0]):
+            for i in range(img_data.shape[0]):
                 ori_img = img_data[i, :, :, :]
                 # sci.imshow(ori_img)
                 if self.shuffle:
                     img = random_flip_img(ori_img, horizontal_chance=0.5, vertical_chance=0.5)
                     img = random_rotate_img(img)
+                    #img = datagen.apply_transform(ori_img,transforms)
                 else:
                     img = ori_img
                 exp_img = np.expand_dims(img, 0)
@@ -64,7 +80,6 @@ class DataGenerator(object):
         return bag_batch, bag_label
 
 
-    @threadsafe_generator
     def generate(self, train_set):
         flag_train = self.shuffle
 
