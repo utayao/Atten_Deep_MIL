@@ -5,6 +5,8 @@ I believe it is a very interesting work and so I built it with **Keras** using T
 
 When train the model, we only use the image-level label (0 or 1 to see if it is a cancer image). The attention layer can provide an interpretation of the decision by presenting only a small subset of positive patches.
 
+We published one application ([MEDIA'20](https://www.sciencedirect.com/science/article/abs/pii/S1361841520301535?dgcid=rss_sd_all)) based on AttnMIL in survival learning, please check out this repo https://github.com/uta-smile/DeepAttnMISL_MEDIA
+
 ---
 
 ### Results from my implementation
