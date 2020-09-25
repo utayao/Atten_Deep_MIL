@@ -25,7 +25,7 @@ Applications
 
 Several applications can be found recently. I will summarize them in the following and the first one is our recent work.
 
- - Jiawen Yao, Xinliang Zhu, et al. ["Whole slide images based cancer survival prediction using attention guided deep multiple instance learning networks"](https://www.sciencedirect.com/science/article/abs/pii/S1361841520301535?dgcid=rss_sd_all), Medical Image Analysis, 101789, 2020. [[Code]](https://github.com/uta-smile/DeepAttnMISL_MEDIA)
+ - Jiawen Yao, Xinliang Zhu, et al. ["Whole slide images based cancer survival prediction using attention guided deep multiple instance learning networks"](https://www.sciencedirect.com/science/article/abs/pii/S1361841520301535?dgcid=rss_sd_all), Medical Image Analysis, 101789, 2020.[[PDF]](https://arxiv.org/pdf/2009.11169.pdf) [[Code]](https://github.com/uta-smile/DeepAttnMISL_MEDIA)
 <p align="center">
   <img align="center" src="https://camo.githubusercontent.com/1f2a461a631d381a19905e87638440253cd86e44/68747470733a2f2f6172732e656c732d63646e2e636f6d2f636f6e74656e742f696d6167652f312d73322e302d53313336313834313532303330313533352d6678315f6c72672e6a7067" width="600">
 </p>
