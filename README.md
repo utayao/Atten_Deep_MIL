@@ -36,7 +36,7 @@ Other important work used multiple-instance learning include
 
 
 ---
-### Concat
+### Contact
 If you have any questions about this code, I am happy to answer your issues or emails (to yjiaweneecs@gmail.com).
 
 I plan to review recent work using Deep MIL techniques in medical imaging and Your suggestions are very welcome ! 
