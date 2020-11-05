@@ -63,6 +63,12 @@ def parse_args():
     return args
 
 def generate_batch(path):
+    """
+    Generate a batch of examples.
+
+    Args:
+        path: (str): write your description
+    """
     bags = []
     for each_path in path:
         name_img = []
@@ -200,6 +206,15 @@ def train_eval(model, train_set, irun, ifold):
 
 
 def model_training(input_dim, dataset, irun, ifold):
+    """
+    Generates the model.
+
+    Args:
+        input_dim: (int): write your description
+        dataset: (todo): write your description
+        irun: (todo): write your description
+        ifold: (todo): write your description
+    """
 
     train_bags = dataset['train']
     test_bags = dataset['test']

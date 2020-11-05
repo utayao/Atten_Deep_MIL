@@ -17,6 +17,18 @@ class Mil_Attention(Layer):
 
     def __init__(self, L_dim, output_dim, kernel_initializer='glorot_uniform', kernel_regularizer=None,
                     use_bias=True, use_gated=False, **kwargs):
+        """
+        Initialize the network.
+
+        Args:
+            self: (todo): write your description
+            L_dim: (int): write your description
+            output_dim: (int): write your description
+            kernel_initializer: (int): write your description
+            kernel_regularizer: (dict): write your description
+            use_bias: (bool): write your description
+            use_gated: (bool): write your description
+        """
         self.L_dim = L_dim
         self.output_dim = output_dim
         self.use_bias = use_bias
@@ -34,6 +46,13 @@ class Mil_Attention(Layer):
         super(Mil_Attention, self).__init__(**kwargs)
 
     def build(self, input_shape):
+        """
+        Connects the graph.
+
+        Args:
+            self: (todo): write your description
+            input_shape: (list): write your description
+        """
 
         assert len(input_shape) == 2
         input_dim = input_shape[1]
@@ -65,6 +84,14 @@ class Mil_Attention(Layer):
 
 
     def call(self, x, mask=None):
+        """
+        Compute the g ( k ). ).
+
+        Args:
+            self: (todo): write your description
+            x: (array): write your description
+            mask: (array): write your description
+        """
         n, d = x.shape
         ori_x = x
         # do Vhk^T
@@ -83,12 +110,25 @@ class Mil_Attention(Layer):
         return alpha
 
     def compute_output_shape(self, input_shape):
+        """
+        Compute the output shape.
+
+        Args:
+            self: (todo): write your description
+            input_shape: (list): write your description
+        """
         shape = list(input_shape)
         assert len(shape) == 2
         shape[1] = self.output_dim
         return tuple(shape)
 
     def get_config(self):
+        """
+        : return a list.
+
+        Args:
+            self: (str): write your description
+        """
         config = {
             'output_dim': self.output_dim,
             'v_initializer': initializers.serialize(self.V.initializer),
@@ -130,6 +170,18 @@ class Last_Sigmoid(Layer):
     def __init__(self, output_dim, kernel_initializer='glorot_uniform', bias_initializer='zeros',
                     kernel_regularizer=None, bias_regularizer=None,
                     use_bias=True, **kwargs):
+        """
+        Initialize the network.
+
+        Args:
+            self: (todo): write your description
+            output_dim: (int): write your description
+            kernel_initializer: (int): write your description
+            bias_initializer: (int): write your description
+            kernel_regularizer: (dict): write your description
+            bias_regularizer: (dict): write your description
+            use_bias: (bool): write your description
+        """
         self.output_dim = output_dim
 
         self.kernel_initializer = initializers.get(kernel_initializer)
@@ -141,6 +193,13 @@ class Last_Sigmoid(Layer):
         super(Last_Sigmoid, self).__init__(**kwargs)
 
     def build(self, input_shape):
+        """
+        Connects the network to the graph.
+
+        Args:
+            self: (todo): write your description
+            input_shape: (list): write your description
+        """
         assert len(input_shape) == 2
         input_dim = input_shape[1]
 
@@ -160,6 +219,14 @@ class Last_Sigmoid(Layer):
         self.input_built = True
 
     def call(self, x, mask=None):
+        """
+        Implement self ( x ).
+
+        Args:
+            self: (todo): write your description
+            x: (array): write your description
+            mask: (array): write your description
+        """
         n, d = x.shape
         x = K.sum(x, axis=0, keepdims=True)
         # compute instance-level score
@@ -174,12 +241,25 @@ class Last_Sigmoid(Layer):
         return out
 
     def compute_output_shape(self, input_shape):
+        """
+        Compute the output shape.
+
+        Args:
+            self: (todo): write your description
+            input_shape: (list): write your description
+        """
         shape = list(input_shape)
         assert len(shape) == 2
         shape[1] = self.output_dim
         return tuple(shape)
 
     def get_config(self):
+        """
+        Get kernel configurations.
+
+        Args:
+            self: (str): write your description
+        """
         config = {
             'output_dim': self.output_dim,
             'kernel_initializer': initializers.serialize(self.kernel.initializer),
