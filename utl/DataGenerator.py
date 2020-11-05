@@ -11,13 +11,32 @@ class threadsafe_iter(object):
     serializing call to the `next` method of given iterator/generator.
     """
     def __init__(self, it):
+        """
+        Initialize the thread.
+
+        Args:
+            self: (todo): write your description
+            it: (str): write your description
+        """
         self.it = it
         self.lock = threading.Lock()
 
     def __iter__(self):
+        """
+        Returns an iterator over the iterable.
+
+        Args:
+            self: (todo): write your description
+        """
         return self
 
     def next(self):
+        """
+        Returns the next item.
+
+        Args:
+            self: (todo): write your description
+        """
         with self.lock:
             return self.it.next()
 
@@ -26,21 +45,51 @@ def threadsafe_generator(f):
     A decorator that takes a generator function and makes it thread-safe.
     """
     def g(*a, **kw):
+        """
+        Return a function that returns the given function returning the result of the result.
+
+        Args:
+            a: (int): write your description
+            kw: (todo): write your description
+        """
         return threadsafe_iter(f(*a, **kw))
     return g
 
 class DataGenerator(object):
     def __init__(self, batch_size=32, shuffle=True):
+        """
+        Initialize a batch.
+
+        Args:
+            self: (todo): write your description
+            batch_size: (int): write your description
+            shuffle: (bool): write your description
+        """
         self.shuffle = shuffle
         self.batch_size = batch_size
 
     def __Get_exploration_order(self, list_patient, shuffle):
+        """
+        Return a random order from a list of integers.
+
+        Args:
+            self: (todo): write your description
+            list_patient: (str): write your description
+            shuffle: (bool): write your description
+        """
         indexes = np.arange(len(list_patient))
         if shuffle:
             random.shuffle(indexes)
         return indexes
 
     def __Data_Genaration(self, batch_train):
+        """
+        Generate a batch of examples.
+
+        Args:
+            self: (todo): write your description
+            batch_train: (todo): write your description
+        """
         bag_batch = []
         bag_label = []
         
@@ -81,6 +130,13 @@ class DataGenerator(object):
 
 
     def generate(self, train_set):
+        """
+        Generate training dataset.
+
+        Args:
+            self: (todo): write your description
+            train_set: (int): write your description
+        """
         flag_train = self.shuffle
 
         while 1:

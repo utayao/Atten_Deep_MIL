@@ -3,6 +3,14 @@ import numpy as np
 import cv2
 
 def random_flip_img(img, horizontal_chance=0, vertical_chance=0):
+    """
+    Flip a random values.
+
+    Args:
+        img: (array): write your description
+        horizontal_chance: (todo): write your description
+        vertical_chance: (bool): write your description
+    """
     flip_horizontal = False
     if random.random() < horizontal_chance:
         flip_horizontal = True
@@ -28,6 +36,12 @@ def random_flip_img(img, horizontal_chance=0, vertical_chance=0):
     return res
 
 def random_rotate_img(images):
+    """
+    Rotate an image
+
+    Args:
+        images: (array): write your description
+    """
     rand_roat = np.random.randint(4, size=1)
     angle = 90*rand_roat
     center = (images.shape[0] / 2, images.shape[1] / 2)
@@ -38,6 +52,13 @@ def random_rotate_img(images):
     return img_inst
 
 def random_crop(image, crop_size=(400, 400)):
+    """
+    Randomly crop an image.
+
+    Args:
+        image: (array): write your description
+        crop_size: (int): write your description
+    """
     height, width = image.shape[:-1]
     dy, dx = crop_size
     X = np.copy(image)

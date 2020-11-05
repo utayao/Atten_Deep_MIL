@@ -14,6 +14,13 @@ from .metrics import bag_accuracy, bag_loss
 from .custom_layers import Mil_Attention, Last_Sigmoid
 
 def cell_net(input_dim, args, useMulGpu=False):
+    """
+    Cell network.
+
+    Args:
+        input_dim: (int): write your description
+        useMulGpu: (todo): write your description
+    """
 
     lr = args.init_lr
     weight_decay = args.init_lr
