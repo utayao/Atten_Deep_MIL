@@ -21,7 +21,7 @@ When train the model, we only use the image-level label (0 or 1 to see if it is 
 I put my processed data here and you can also set up according to the paper. If you have any problem, please feel free to contact me.
 
 ---
-Applications
+### Applications
 
 Several applications can be found recently. I will summarize them in the following and the first one is our recent work.
 
@@ -43,5 +43,5 @@ I plan to review recent work using Deep MIL techniques in medical imaging and Yo
 
 ### Acknowledgments
 --------------------
-The work conducted by Jiawen Yao was funded by Grants from the UTA-SMILE Lab.
+The work conducted by [Jiawen Yao](https://utayao.github.io/) was funded by Grants from the [UTA-SMILE Lab](https://github.com/uta-smile).
 
