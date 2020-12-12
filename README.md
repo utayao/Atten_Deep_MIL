@@ -34,7 +34,7 @@ Other important work used multiple-instance learning include
  - Ole-Johan Skrede et al., “[Deep learning for prediction of colorectal cancer outcome: a discovery and validation study](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32998-8/fulltext)", the Lancet, 2020.
     - Used [Noisy-AND MIL pooling](https://academic.oup.com/bioinformatics/article/32/12/i52/2288769) to get WSI-level representation.
 
-
+  - Shujun Wang, Yaxi Zhu, et al. ["RMDL: Recalibrated multi-instance deep learning for whole slide gastric image classification"](https://arxiv.org/abs/2010.06440), Medical Image Analysis, Volume 58, December 2019, 101549. [[Code]](https://github.com/EmmaW8/RMDL)
 ---
 ### Contact
 If you have any questions about this code, I am happy to answer your issues or emails (to yjiaweneecs@gmail.com).
