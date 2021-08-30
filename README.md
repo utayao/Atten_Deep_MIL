@@ -32,7 +32,7 @@ Several applications can be found recently. I will summarize them in the followi
 
 Other important work used multiple-instance learning include
  - Jianan Chen, Helen M. C. Cheung, Laurent Milot and [Anne L. Martel](http://martellab.com/) "[AMINN: Autoencoder-based Multiple Instance Neural Network Improves Outcome Prediction of Multifocal Liver Metastases](https://arxiv.org/pdf/2012.06875.pdf)", MICCAI 2021.  [[Code]](https://github.com/martellab-sri/AMINN)
-    - The autoencoder-based multiple instance neural network that is deveopled to address multifocality, i.e. to incorporate features from all lesions for prediction/classification.
+    - The autoencoder-based multiple instance neural network is deveopled to address multifocality, i.e. to incorporate features from all lesions for prediction/classification.
 
  - Ole-Johan Skrede et al., “[Deep learning for prediction of colorectal cancer outcome: a discovery and validation study](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32998-8/fulltext)", the Lancet, 2020.
     - Used [Noisy-AND MIL pooling](https://academic.oup.com/bioinformatics/article/32/12/i52/2288769) to get WSI-level representation.
