@@ -30,14 +30,17 @@ Several applications can be found recently. I will summarize them in the followi
   <img align="center" src="https://camo.githubusercontent.com/1f2a461a631d381a19905e87638440253cd86e44/68747470733a2f2f6172732e656c732d63646e2e636f6d2f636f6e74656e742f696d6167652f312d73322e302d53313336313834313532303330313533352d6678315f6c72672e6a7067" width="600">
 </p>
 
-Other important work used multiple-instance learning include
- - Jianan Chen, Helen M. C. Cheung, Laurent Milot and [Anne L. Martel](http://martellab.com/) "[AMINN: Autoencoder-based Multiple Instance Neural Network Improves Outcome Prediction of Multifocal Liver Metastases](https://arxiv.org/pdf/2012.06875.pdf)", MICCAI 2021.  [[Code]](https://github.com/martellab-sri/AMINN)
-    - The autoencoder-based multiple instance neural network is deveopled to address multifocality, i.e. to incorporate features from all lesions for prediction/classification.
+Other important work used multiple-instance learning in medical imaging include (list will be updated frequently)
 
- - Ole-Johan Skrede et al., “[Deep learning for prediction of colorectal cancer outcome: a discovery and validation study](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32998-8/fulltext)", the Lancet, 2020.
-    - Used [Noisy-AND MIL pooling](https://academic.oup.com/bioinformatics/article/32/12/i52/2288769) to get WSI-level representation.
+|Year|Author list|Title|Conference/Journal|
+|---|---|---|---|
+|2021|Ming Y. Lu, Tiffany Y. Chen, Drew F. K. Williamson, Melissa Zhao, Maha Shady, Jana Lipkova & [Faisal Mahmood](https://faisal.ai/)|AI-based pathology predicts origins for cancers of unknown primary.  [[Pytorch]](https://github.com/mahmoodlab/TOAD) | [Nature](https://www.nature.com/articles/s41586-021-03512-4), [arxiv](https://arxiv.org/abs/2006.13932)|
+|2021|Ming Y. Lu, Drew F. K. Williamson, Tiffany Y. Chen, Richard J. Chen, Matteo Barbieri & [Faisal Mahmood](https://faisal.ai/)|Data-efficient and weakly supervised computational pathology on whole-slide images.  [[Pytorch]](https://github.com/mahmoodlab/CLAM) | [Nature Biomedical Engineering](https://www.nature.com/articles/s41551-020-00682-w), [arxiv](https://arxiv.org/pdf/2004.09666.pdf)|
+|2021|Jianan Chen, Helen M. C. Cheung, Laurent Milot and [Anne L. Martel](http://martellab.com/)|AMINN: Autoencoder-based Multiple Instance Neural Network Improves Outcome Prediction of Multifocal Liver Metastases.  [[Keras]](https://github.com/martellab-sri/AMINN) | MICCAI 2021 [arxiv](https://arxiv.org/pdf/2012.06875.pdf)|
+|2020|Ole-Johan Skrede et al.|Deep learning for prediction of colorectal cancer outcome: a discovery and validation study|[Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32998-8/fulltext)|
+|2019|[Shujun Wang](https://emma-sjwang.github.io/), Yaxi Zhu, et al.|RMDL: Recalibrated multi-instance deep learning for whole slide gastric image classification [[Keras]](https://github.com/EmmaW8/RMDL)|Medical Image Analysis [arxiv](https://arxiv.org/abs/2010.06440)|
 
-  - Shujun Wang, Yaxi Zhu, et al. ["RMDL: Recalibrated multi-instance deep learning for whole slide gastric image classification"](https://arxiv.org/abs/2010.06440), Medical Image Analysis, Volume 58, December 2019, 101549. [[Code]](https://github.com/EmmaW8/RMDL)
+
 ---
 ### Contact
 If you have any questions about this code, I am happy to answer your issues or emails (to yjiaweneecs@gmail.com).
