@@ -23,14 +23,17 @@ I put my processed data here and you can also set up according to the paper. If 
 ---
 ### Applications
 
-Several applications can be found recently. I will summarize them in the following and the first one is our recent work.
+#### The first one is our recent work.
+|Year|Author list|Title|Conference/Journal|
+|---|---|---|---|
+|2020|[Jiawen Yao](https://utayao.github.io/), Xinliang Zhu, Jitendra Jonnagaddala, Nicholas Hawkins, [Junzhou Huang](https://ranger.uta.edu/~huang/)|Whole slide images based cancer survival prediction using attention guided deep multiple instance learning networks.  [[Pytorch]](https://github.com/uta-smile/DeepAttnMISL) | Medical Image Analysis, 101789, 2020, [[PDF]](https://www.sciencedirect.com/science/article/abs/pii/S1361841520301535?dgcid=rss_sd_all), [[arxiv]](https://arxiv.org/pdf/2009.11169.pdf)|
 
- - Jiawen Yao, Xinliang Zhu, et al. ["Whole slide images based cancer survival prediction using attention guided deep multiple instance learning networks"](https://www.sciencedirect.com/science/article/abs/pii/S1361841520301535?dgcid=rss_sd_all), Medical Image Analysis, 101789, 2020.[[PDF]](https://arxiv.org/pdf/2009.11169.pdf) [[Code]](https://github.com/uta-smile/DeepAttnMISL)
+
 <p align="center">
   <img align="center" src="https://camo.githubusercontent.com/1f2a461a631d381a19905e87638440253cd86e44/68747470733a2f2f6172732e656c732d63646e2e636f6d2f636f6e74656e742f696d6167652f312d73322e302d53313336313834313532303330313533352d6678315f6c72672e6a7067" width="600">
 </p>
 
-Other important work used multiple-instance learning in medical imaging include (list will be updated frequently)
+#### Other important work used multiple-instance learning in medical imaging include (list will be updated frequently)
 
 |Year|Author list|Title|Conference/Journal|
 |---|---|---|---|
